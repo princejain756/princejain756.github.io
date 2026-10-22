@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prince Jain</title>
+<style>
+  body { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background:#0d1117; color:#e6edf3; max-width: 720px; margin: 0 auto; padding: 3rem 1.25rem; line-height: 1.6; }
+  h1 { font-size: 1.6rem; margin-bottom: 0.2rem; }
+  .sub { color:#8b949e; margin-bottom: 2rem; }
+  h2 { font-size: 1rem; color:#58a6ff; margin-top: 2.2rem; }
+  a { color:#58a6ff; }
+  .num { color:#7ee787; }
+  footer { margin-top: 3rem; color:#8b949e; font-size: 0.85rem; }
+  li { margin-bottom: 0.35rem; }
+</style>
+</head>
+<body>
+<h1>Prince Jain</h1>
+<div class="sub">Head of Technology, Adelev8 · Bengaluru, India · I write all the code the title implies</div>
+
+<h2>what i run in production</h2>
+<p>
+The entire software stack for <a href="https://biggbounce.com">Bigg Bounce</a>, a 30,000 sq ft
+bouncing theme park in Bengaluru. Booking site, self-service kiosks, POS, QR gate entry,
+Razorpay UPI payments, ESC/POS thermal printing, rain-day transfers. Built solo, still operated by me.
+</p>
+<ul>
+  <li><span class="num">2,935</span> paid bookings = Rs 63.5 lakh</li>
+  <li><span class="num">6,541</span> POS orders = Rs 20.3 lakh</li>
+  <li><span class="num">172,788</span> tracked site visits, <span class="num">3,240</span> integration events, <span class="num">46</span> migrations</li>
+  <li><span class="num">5</span> linux servers, <span class="num">49</span> PM2 services online, <span class="num">51</span> docker containers, <span class="num">134</span> nginx vhosts</li>
+</ul>
+<p>Stack: TypeScript/Node.js, Next.js 15, React 19, Postgres, Python, Redis, Docker, nginx, PM2, systemd.</p>
+
+<h2>open source</h2>
+<p>I ship devtools CLIs on npm and fix things upstream where I use them.</p>
+<ul>
+  <li><b>agent-trials</b> - run claude, codex and gemini agents against the same task suite in throwaway repo copies; verifies by rerunning each agent's own verify scripts</li>
+  <li><b>ctxvitals</b> - token cost of your MCP servers, skills and rules before you type a word; grades A-F</li>
+  <li><b>mcp-bouncer</b> - policy proxy for stdio MCP servers: allowlists, SSRF and path-traversal blocking, JSONL audit</li>
+  <li><b>slopsieve</b> - reviews diffs and PRs for AI-slop signals (weakened tests, debug leftovers, trivial deps)</li>
+  <li><b>ruleherd</b> - audits agent instruction files for contradictions and dead references</li>
+</ul>
+<p>
+Upstream: merged fixes in cockroachdb/pebble (#842, #843 - one bug open since 2021),
+lancedb (#4584, #4586), windmill (#11863, #11494). Open work in vercel/ai, starlette, axios, sqlglot.
+1,107 contributions in the last year.
+</p>
+
+<h2>git + agents</h2>
+<p>
+Daily driver is real worktree hygiene: parallel agent runs on branches, rebases, bisects.
+I benchmark the agents (agent-trials), police their configs (ruleherd, ctxvitals) and review their
+output (slopsieve) - making a codebase agent-ready is most of what I already do for a living.
+</p>
+
+<h2>reach me</h2>
+<p>
+<a href="https://github.com/princejain756">github.com/princejain756</a><br>
+<a href="https://w.prince.sh/website">w.prince.sh/website</a><br>
+<a href="https://maintaineros.prince.sh">maintaineros.prince.sh</a><br>
+<a href="https://www.linkedin.com/in/princejainai/">linkedin</a> ·
+<a href="https://x.com/princejain756">x</a> ·
+princejain756@gmail.com · +91 8005634678
+</p>
+
+<footer>hosted on github pages because that's where the work is anyway.</footer>
+</body>
+</html>
