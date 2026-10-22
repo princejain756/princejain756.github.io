@@ -17,86 +17,42 @@
 </head>
 <body>
 <h1>Prince Jain</h1>
-<div class="sub">Full-Stack Software Engineer, Adelev8 · Bengaluru, India</div>
+<div class="sub">Head of Technology, Adelev8 · Bengaluru, India · I write all the code the title implies</div>
 
+<h2>what i run in production</h2>
 <p>
-I build and operate production systems at Adelev8 (growth marketing and venue tech):
-product, code, infrastructure, payments, and security across a five-node Linux fleet.
-</p>
-
-<h2>venue os - the thing i run</h2>
-<p>
-Adelev8's venue-operations platform runs a 30,000 sq ft entertainment park in Bengaluru:
-direct-ticket site, self-service kiosks, cashier POS, ESC/POS printing, QR turnstiles with
-anti-passback, Razorpay UPI reconciliation, vendor split payouts, rain-day ticket transfers,
-server-side Meta CAPI.
+The entire software stack for <a href="https://biggbounce.com">Bigg Bounce</a>, a 30,000 sq ft
+bouncing theme park in Bengaluru. Booking site, self-service kiosks, POS, QR gate entry,
+Razorpay UPI payments, ESC/POS thermal printing, rain-day transfers. Built solo, still operated by me.
 </p>
 <ul>
-  <li><span class="num">10,238</span> recorded transactions across <span class="num">3,526</span> paid bookings and <span class="num">7,116</span> POS orders</li>
-  <li><span class="num">170K+</span> tracked visit events, <span class="num">46</span> applied Postgres migrations</li>
-  <li>peak day at <span class="num">994</span> tickets and <span class="num">937</span> gate check-ins</li>
+  <li><span class="num">2,935</span> paid bookings = Rs 63.5 lakh</li>
+  <li><span class="num">6,541</span> POS orders = Rs 20.3 lakh</li>
+  <li><span class="num">172,788</span> tracked site visits, <span class="num">3,240</span> integration events, <span class="num">46</span> migrations</li>
+  <li><span class="num">5</span> linux servers, <span class="num">49</span> PM2 services online, <span class="num">51</span> docker containers, <span class="num">134</span> nginx vhosts</li>
 </ul>
-
-<h2>the fleet i operate</h2>
-<p>
-Five self-operated nodes: 26 CPUs, ~105.7 GiB RAM, 51 docker containers, 49 PM2 services,
-nginx across ~155 hostnames. Node roles: the Adelev8 box (venue, Saroj Jain, Quantiti),
-the pharma client box (SPL Life Sciences, Saroj Jain CRM, Plane, OpenSEO), the Hostinger box
-(MyToyTree's 8-container ERP, Livetree, self-hosted mail), an Oracle Ampere agent node, AWS EC2.
-Plus a self-built health dashboard over all of it.
-</p>
-
-<h2>client systems i host and built</h2>
-<ul>
-  <li><b>MyToyTree</b> - toy retail: full ERP stack, POS, invoicing, self-hosted mail (Stalwart + Roundcube)</li>
-  <li><b>Livetree</b> - ops platform with an HDFC-bank integration service</li>
-  <li><b>SPL Life Sciences</b> - pharma systems on a dedicated node</li>
-  <li><b>Saroj Jain</b> - D2C brand: commerce stack, iOS app, 8-service self-hosted CRM (5x first-month growth, 2.71 ROAS on Myntra)</li>
-  <li><b>Meghdoot Textiles</b> - custom CRM, ERP, HRMS + WhatsApp retailer automation</li>
-  <li><b>Payments clients</b> - Suparna Ghosal (dedicated Razorpay service), Indian Souvenir Store, Garlic Brothers Exports, Credence Wire, Trusser</li>
-  <li><b>Brands</b> - BMW KUN Exclusive, Mulveer Jewellers, Ananta Karunai, Stones Gallery, 2thewall</li>
-</ul>
-
-<h2>other work</h2>
-<ul>
-  <li><b>Quantiti</b> - Quantitative Software Engineer. Python quant platform routing real orders to Zerodha: ~Rs 1.5 Cr notional in 4 weeks across MCX, equity and F&amp;O, kill-switches and per-fill slippage tracking. Research on self-orchestrated GPU (Kaggle T4s, ephemeral Vast.ai RTX 3090s that self-destroy).</li>
-  <li><b>Maninfini Automation</b> - Software Engineer &amp; Platform Consultant (Partner). B2B SaaS and automation for pharma and jewellery houses.</li>
-  <li><b>Independent</b> - seven live KDP titles, seven App Store Connect records (four public), licensed ElevenLabs voices, contractor at Mercor.</li>
-</ul>
+<p>Stack: TypeScript/Node.js, Next.js 15, React 19, Postgres, Python, Redis, Docker, nginx, PM2, systemd.</p>
 
 <h2>open source</h2>
+<p>I ship devtools CLIs on npm and fix things upstream where I use them.</p>
+<ul>
+  <li><b>agent-trials</b> - run claude, codex and gemini agents against the same task suite in throwaway repo copies; verifies by rerunning each agent's own verify scripts</li>
+  <li><b>ctxvitals</b> - token cost of your MCP servers, skills and rules before you type a word; grades A-F</li>
+  <li><b>mcp-bouncer</b> - policy proxy for stdio MCP servers: allowlists, SSRF and path-traversal blocking, JSONL audit</li>
+  <li><b>slopsieve</b> - reviews diffs and PRs for AI-slop signals (weakened tests, debug leftovers, trivial deps)</li>
+  <li><b>ruleherd</b> - audits agent instruction files for contradictions and dead references</li>
+</ul>
 <p>
-npm CLIs &amp; tools: <b><a href="https://github.com/princejain756/agent-trials">agent-trials</a></b> (run claude/codex/gemini through one task suite,
-scored by their own verify scripts), <b><a href="https://github.com/princejain756/ctxvitals">ctxvitals</a></b> (token cost of MCP servers, skills, rules),
-<b><a href="https://github.com/princejain756/compactsim">compactsim</a></b> (counterfactual autoCompactWindow replay &amp; Context Rent profiler for Claude Code and Codex logs),
-<b><a href="https://github.com/princejain756/mcp-bouncer">mcp-bouncer</a></b> (stdio MCP policy proxy), <b><a href="https://github.com/princejain756/canimcp">canimcp</a></b> (MCP client quirks preflight),
-<b><a href="https://github.com/princejain756/slopsieve">slopsieve</a></b> (AI-slop diff reviewer),
-<b><a href="https://github.com/princejain756/uislop">uislop</a></b> (frontend vibecode linter),
-<b><a href="https://github.com/princejain756/agentblast">agentblast</a></b> (agent blast-radius &amp; SSH auditor),
-<b><a href="https://github.com/princejain756/egressleak">egressleak</a></b> (outbound HTTP egress &amp; User-Agent PII leak auditor),
-<b><a href="https://github.com/princejain756/repotrap">repotrap</a></b> (prompt-injection, invisible Unicode &amp; repo-open trap scanner),
-<b><a href="https://github.com/princejain756/loopbrake">loopbrake</a></b> (agent edit-thrash, 39.2% shell-write bypass &amp; doom-loop breaker),
-<b><a href="https://github.com/princejain756/clonesieve">clonesieve</a></b> (structural function clone, duplicate helper &amp; dead-export auditor + 39.0% blind-write transcript scanner),
-<b><a href="https://github.com/princejain756/ruleherd">ruleherd</a></b>, <b><a href="https://github.com/princejain756/mcp-tax">mcp-tax</a></b>, <b><a href="https://github.com/princejain756/dep-census">dep-census</a></b>, <b><a href="https://github.com/princejain756/readmeroast">readmeroast</a></b>, and <b><a href="https://maintaineros.prince.sh">MaintainerOS</a></b>.
-</p>
-<p>
-Upstream (<span class="num">40 merged PRs</span>): merged fixes in <b>BerriAI/litellm</b> (#50657), <b>Arize-ai/phoenix</b> (#17816, #17818), <b>servo/rust-url</b> (#1161), <b>tokio-rs/bytes</b> (#862, #863), <b>seanmonstar/reqwest</b> (#3118), <b>agno-agi/agno</b> (#11526), <b>apache/datafusion</b> (#26551), <b>apache/arrow-rs</b> (#11845),
-<b>lancedb/lancedb</b> (#4584, #4586), <b>oxc-project/oxc</b> (#28008),
-<b>sqlalchemy/sqlalchemy</b> (#13710, merged via Gerrit), <b>pmd/pmd</b> (#7225), <b>connectrpc/connect-es</b> (#1849),
-<b>JSQLParser/JSqlParser</b> (#2838 through #2843), <b>redis/lettuce</b> (#3966),
-<b>Pebble</b> (#842, #843, #845, #846, #847 - #843 fixed a comparison bug open since 2021),
-<b>Handlebars.java</b> (#1200, #1201), <b>elie222/rakazo</b> (#2125 through #2138, 8 merged PRs), and <b>utk09-NCL/skardela</b> (#12, #13). Fixes and regression suites I authored in <b>vercel/ai</b> (<a href="https://github.com/vercel/ai/pull/23935">#23935</a>) and <b>NousResearch/hermes-agent</b> (<a href="https://github.com/NousResearch/hermes-agent/pull/150992">#150992</a>) shipped with <code>Co-authored-by</code> credit.
-In review: <b>browserbase/stagehand</b> (<a href="https://github.com/browserbase/stagehand/pull/3441">#3441</a>), <b>vercel/ai</b> (#24764), <b>inngest/inngest-js</b> (#1880, #1882), <b>BerriAI/litellm</b> (#50674, #50662, #50655, #50645), <b>agno-agi/agno</b> (#11549), <b>Comfy-Org/ComfyUI</b> (#17617), <b>Arize-ai/phoenix</b> (#17746), <b>pydantic/pydantic-ai</b> (#12864), <b>triggerdotdev/trigger.dev</b> (#5105, #5052), <b>vercel-labs/agent-desktop</b> (#624, #610, #635), <b>petgraph/petgraph</b> (#1066), <b>axios/axios</b> (#11362, #11363, #11367), <b>oxc-project/oxc</b> (#28109, #28110),
-<b>ray-project/ray</b> (#67229), <b>msgspec</b> (#1302), <b>TanStack/table</b> (#6639), and <b>NousResearch/hermes-agent</b> (#146938, #146940, #151383).
-1,250+ contributions in the last year.
+Upstream: merged fixes in cockroachdb/pebble (#842, #843 - one bug open since 2021),
+lancedb (#4584, #4586), windmill (#11863, #11494). Open work in vercel/ai, starlette, axios, sqlglot.
+1,107 contributions in the last year.
 </p>
 
 <h2>git + agents</h2>
 <p>
-Parallel agent runs on real worktrees, branches and rebases are my daily shape of work.
-I benchmark the agents (agent-trials), audit their config files (ruleherd), meter their
-context cost (ctxvitals), gate their MCP tools (mcp-bouncer, canimcp) and lint their output (slopsieve). Making a codebase agent-ready
-is most of what I already do.
+Daily driver is real worktree hygiene: parallel agent runs on branches, rebases, bisects.
+I benchmark the agents (agent-trials), police their configs (ruleherd, ctxvitals) and review their
+output (slopsieve) - making a codebase agent-ready is most of what I already do for a living.
 </p>
 
 <h2>reach me</h2>
@@ -106,7 +62,7 @@ is most of what I already do.
 <a href="https://maintaineros.prince.sh">maintaineros.prince.sh</a><br>
 <a href="https://www.linkedin.com/in/princejainai/">linkedin</a> ·
 <a href="https://x.com/princejain756">x</a> ·
-mail@prince.sh · +91 8005634678
+princejain756@gmail.com · +91 8005634678
 </p>
 
 <footer>hosted on github pages because that's where the work is anyway.</footer>
