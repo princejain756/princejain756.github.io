@@ -17,42 +17,61 @@
 </head>
 <body>
 <h1>Prince Jain</h1>
-<div class="sub">Head of Technology, Adelev8 · Bengaluru, India · I write all the code the title implies</div>
+<div class="sub">Co-Founder &amp; Head of Technology, Adelev8 · Bengaluru, India</div>
 
-<h2>what i run in production</h2>
 <p>
-The entire software stack for <a href="https://biggbounce.com">Bigg Bounce</a>, a 30,000 sq ft
-bouncing theme park in Bengaluru. Booking site, self-service kiosks, POS, QR gate entry,
-Razorpay UPI payments, ESC/POS thermal printing, rain-day transfers. Built solo, still operated by me.
+I head technology at Adelev8, the growth-marketing and venue-tech company I co-founded:
+product, code, infrastructure, payments, security and the team behind them.
+</p>
+
+<h2>venue os - the thing i run</h2>
+<p>
+Adelev8's venue-operations platform runs a 30,000 sq ft entertainment park in Bengaluru:
+direct-ticket site, self-service kiosks, cashier POS, ESC/POS printing, QR turnstiles with
+anti-passback, Razorpay UPI reconciliation, vendor split payouts, rain-day ticket transfers,
+server-side Meta CAPI. Built end to end under my technical direction.
 </p>
 <ul>
-  <li><span class="num">2,935</span> paid bookings = Rs 63.5 lakh</li>
-  <li><span class="num">6,541</span> POS orders = Rs 20.3 lakh</li>
-  <li><span class="num">172,788</span> tracked site visits, <span class="num">3,240</span> integration events, <span class="num">46</span> migrations</li>
-  <li><span class="num">5</span> linux servers, <span class="num">49</span> PM2 services online, <span class="num">51</span> docker containers, <span class="num">134</span> nginx vhosts</li>
+  <li><span class="num">Rs 80 lakh+</span> recorded through the venue system</li>
+  <li><span class="num">2,900+</span> paid bookings, <span class="num">6,500+</span> POS orders</li>
+  <li><span class="num">170K+</span> tracked visit events, <span class="num">46</span> applied Postgres migrations</li>
+  <li>peak day above <span class="num">900</span> tickets and gate check-ins</li>
 </ul>
-<p>Stack: TypeScript/Node.js, Next.js 15, React 19, Postgres, Python, Redis, Docker, nginx, PM2, systemd.</p>
+
+<h2>infrastructure</h2>
+<p>
+Self-operated five-node fleet (AWS EC2 + Oracle Ampere arm64): 26 logical CPUs, ~105.7 GiB RAM,
+51 running Docker containers, 49 online PM2 instances, nginx across ~155 configured hostnames.
+Plus a self-built fleet health dashboard tracking RAM, disk, load, processes and failed logins.
+</p>
+
+<h2>other ventures</h2>
+<ul>
+  <li><b>Quantiti</b> - founder. Python quant platform routing real orders to Zerodha: ~Rs 1.5 Cr notional in 4 weeks across MCX, equity and F&amp;O, with kill-switches, reconciliation and per-fill slippage tracking. Research on self-orchestrated GPU (Kaggle T4s, ephemeral Vast.ai RTX 3090s that self-destroy).</li>
+  <li><b>Maninfini Automation</b> - CTO &amp; partner. B2B SaaS and automation for pharma and jewellery houses.</li>
+  <li><b>Saroj Jain</b> - CMO, built the Shopify commerce stack (Rs 4 lakh+ sales on record).</li>
+  <li><b>Independent</b> - four live KDP titles, seven App Store Connect records (four public), licensed ElevenLabs voices, independent contractor at Mercor.</li>
+</ul>
 
 <h2>open source</h2>
-<p>I ship devtools CLIs on npm and fix things upstream where I use them.</p>
-<ul>
-  <li><b>agent-trials</b> - run claude, codex and gemini agents against the same task suite in throwaway repo copies; verifies by rerunning each agent's own verify scripts</li>
-  <li><b>ctxvitals</b> - token cost of your MCP servers, skills and rules before you type a word; grades A-F</li>
-  <li><b>mcp-bouncer</b> - policy proxy for stdio MCP servers: allowlists, SSRF and path-traversal blocking, JSONL audit</li>
-  <li><b>slopsieve</b> - reviews diffs and PRs for AI-slop signals (weakened tests, debug leftovers, trivial deps)</li>
-  <li><b>ruleherd</b> - audits agent instruction files for contradictions and dead references</li>
-</ul>
 <p>
-Upstream: merged fixes in cockroachdb/pebble (#842, #843 - one bug open since 2021),
-lancedb (#4584, #4586), windmill (#11863, #11494). Open work in vercel/ai, starlette, axios, sqlglot.
-1,107 contributions in the last year.
+132 public repos. npm CLIs: <b>agent-trials</b> (run claude/codex/gemini through one task suite,
+scored by their own verify scripts), <b>ctxvitals</b> (token cost of MCP servers, skills, rules),
+<b>mcp-bouncer</b> (stdio MCP policy proxy), <b>slopsieve</b> (AI-slop diff reviewer),
+<b>ruleherd</b>, <b>mcp-tax</b>, <b>dep-census</b>, <b>readmeroast</b>.
+</p>
+<p>
+Upstream: merged fixes in <b>cockroachdb/pebble</b> (#842, #843 - one bug open since 2021),
+<b>lancedb</b> (#4584, #4586), <b>windmill</b> (#11863, #11494). Open work in vercel/ai, starlette,
+axios, sqlglot, TanStack Table, kestra. 1,107 contributions in the last year.
 </p>
 
 <h2>git + agents</h2>
 <p>
-Daily driver is real worktree hygiene: parallel agent runs on branches, rebases, bisects.
-I benchmark the agents (agent-trials), police their configs (ruleherd, ctxvitals) and review their
-output (slopsieve) - making a codebase agent-ready is most of what I already do for a living.
+Parallel agent runs on real worktrees, branches and rebases are my daily shape of work.
+I benchmark the agents (agent-trials), audit their config files (ruleherd), meter their
+context cost (ctxvitals) and lint their output (slopsieve). Making a codebase agent-ready
+is most of what I already do.
 </p>
 
 <h2>reach me</h2>
@@ -62,7 +81,7 @@ output (slopsieve) - making a codebase agent-ready is most of what I already do 
 <a href="https://maintaineros.prince.sh">maintaineros.prince.sh</a><br>
 <a href="https://www.linkedin.com/in/princejainai/">linkedin</a> ·
 <a href="https://x.com/princejain756">x</a> ·
-princejain756@gmail.com · +91 8005634678
+mail@prince.sh · +91 8005634678
 </p>
 
 <footer>hosted on github pages because that's where the work is anyway.</footer>
