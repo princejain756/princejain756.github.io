@@ -21,7 +21,8 @@
 
 <p>
 I head technology at Adelev8, the growth-marketing and venue-tech company I co-founded:
-product, code, infrastructure, payments, security and the team behind them.
+product, code, infrastructure, payments, security and the team behind them. Across the
+systems I build and run, cumulative transaction value is above <span class="num">Rs 10 crore</span>.
 </p>
 
 <h2>venue os - the thing i run</h2>
@@ -32,25 +33,37 @@ anti-passback, Razorpay UPI reconciliation, vendor split payouts, rain-day ticke
 server-side Meta CAPI. Built end to end under my technical direction.
 </p>
 <ul>
-  <li><span class="num">Rs 80 lakh+</span> recorded through the venue system</li>
+  <li><span class="num">Rs 80 lakh+</span> recorded through the venue system alone</li>
   <li><span class="num">2,900+</span> paid bookings, <span class="num">6,500+</span> POS orders</li>
   <li><span class="num">170K+</span> tracked visit events, <span class="num">46</span> applied Postgres migrations</li>
   <li>peak day above <span class="num">900</span> tickets and gate check-ins</li>
 </ul>
 
-<h2>infrastructure</h2>
+<h2>the fleet i operate</h2>
 <p>
-Self-operated five-node fleet (AWS EC2 + Oracle Ampere arm64): 26 logical CPUs, ~105.7 GiB RAM,
-51 running Docker containers, 49 online PM2 instances, nginx across ~155 configured hostnames.
-Plus a self-built fleet health dashboard tracking RAM, disk, load, processes and failed logins.
+Five self-operated nodes: 26 CPUs, ~105.7 GiB RAM, 51 docker containers, 49 PM2 services,
+nginx across ~155 hostnames. Node roles: the Adelev8 box (venue, Saroj Jain, Quantiti),
+the pharma client box (SPL Life Sciences, Saroj Jain CRM, Plane, OpenSEO), the Hostinger box
+(MyToyTree's 8-container ERP, Livetree, self-hosted mail), an Oracle Ampere agent node, AWS EC2.
+Plus a self-built health dashboard over all of it.
 </p>
+
+<h2>client systems i host and built</h2>
+<ul>
+  <li><b>MyToyTree</b> - toy retail: full ERP stack, POS, invoicing, self-hosted mail (Stalwart + Roundcube)</li>
+  <li><b>Livetree</b> - ops platform with an HDFC-bank integration service</li>
+  <li><b>SPL Life Sciences</b> - pharma systems on a dedicated node</li>
+  <li><b>Saroj Jain</b> - D2C brand: commerce stack, iOS app, 8-service self-hosted CRM (Rs 4 lakh+ sales)</li>
+  <li><b>Meghdoot Textiles</b> - custom CRM, ERP, HRMS + WhatsApp retailer automation</li>
+  <li><b>Payments clients</b> - Suparna Ghosal (dedicated Razorpay service), Indian Souvenir Store, Garlic Brothers Exports, Credence Wire, Trusser</li>
+  <li><b>Brands</b> - BMW KUN Exclusive, Mulveer Jewellers, Ananta Karunai, Stones Gallery, 2thewall</li>
+</ul>
 
 <h2>other ventures</h2>
 <ul>
-  <li><b>Quantiti</b> - founder. Python quant platform routing real orders to Zerodha: ~Rs 1.5 Cr notional in 4 weeks across MCX, equity and F&amp;O, with kill-switches, reconciliation and per-fill slippage tracking. Research on self-orchestrated GPU (Kaggle T4s, ephemeral Vast.ai RTX 3090s that self-destroy).</li>
+  <li><b>Quantiti</b> - founder. Python quant platform routing real orders to Zerodha: ~Rs 1.5 Cr notional in 4 weeks across MCX, equity and F&amp;O, kill-switches and per-fill slippage tracking. Research on self-orchestrated GPU (Kaggle T4s, ephemeral Vast.ai RTX 3090s that self-destroy).</li>
   <li><b>Maninfini Automation</b> - CTO &amp; partner. B2B SaaS and automation for pharma and jewellery houses.</li>
-  <li><b>Saroj Jain</b> - CMO, built the Shopify commerce stack (Rs 4 lakh+ sales on record).</li>
-  <li><b>Independent</b> - four live KDP titles, seven App Store Connect records (four public), licensed ElevenLabs voices, independent contractor at Mercor.</li>
+  <li><b>Independent</b> - four live KDP titles, seven App Store Connect records (four public), licensed ElevenLabs voices, contractor at Mercor.</li>
 </ul>
 
 <h2>open source</h2>
