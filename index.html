@@ -68,22 +68,26 @@ Plus a self-built health dashboard over all of it.
 
 <h2>open source</h2>
 <p>
-132 public repos. npm CLIs: <b>agent-trials</b> (run claude/codex/gemini through one task suite,
-scored by their own verify scripts), <b>ctxvitals</b> (token cost of MCP servers, skills, rules),
-<b>mcp-bouncer</b> (stdio MCP policy proxy), <b>slopsieve</b> (AI-slop diff reviewer),
-<b>ruleherd</b>, <b>mcp-tax</b>, <b>dep-census</b>, <b>readmeroast</b>.
+npm CLIs &amp; tools: <b><a href="https://github.com/princejain756/agent-trials">agent-trials</a></b> (run claude/codex/gemini through one task suite,
+scored by their own verify scripts), <b><a href="https://github.com/princejain756/ctxvitals">ctxvitals</a></b> (token cost of MCP servers, skills, rules),
+<b><a href="https://github.com/princejain756/mcp-bouncer">mcp-bouncer</a></b> (stdio MCP policy proxy), <b><a href="https://github.com/princejain756/canimcp">canimcp</a></b> (MCP client quirks preflight),
+<b><a href="https://github.com/princejain756/slopsieve">slopsieve</a></b> (AI-slop diff reviewer),
+<b><a href="https://github.com/princejain756/ruleherd">ruleherd</a></b>, <b><a href="https://github.com/princejain756/mcp-tax">mcp-tax</a></b>, <b><a href="https://github.com/princejain756/dep-census">dep-census</a></b>, <b><a href="https://github.com/princejain756/readmeroast">readmeroast</a></b>, and <b><a href="https://maintaineros.prince.sh">MaintainerOS</a></b>.
 </p>
 <p>
-Upstream: merged fixes in <b>cockroachdb/pebble</b> (#842, #843 - one bug open since 2021),
-<b>lancedb</b> (#4584, #4586), <b>windmill</b> (#11863, #11494). Open work in vercel/ai, starlette,
-axios, sqlglot, TanStack Table, kestra. 1,107 contributions in the last year.
+Upstream: merged fixes in <b>lancedb/lancedb</b> (#4584, #4586), <b>oxc-project/oxc</b> (#28008),
+<b>JSQLParser/JSqlParser</b> (#2838 through #2843), <b>redis/lettuce</b> (#3966),
+<b>Pebble</b> (#842, #843, #846, #847 - #843 fixed a comparison bug open since 2021),
+<b>Handlebars.java</b> (#1201), and <b>windmill</b> (#11863, #11494). Active upstream work in
+<b>apache/datafusion</b> (#26551, #26636), <b>apache/arrow-rs</b> (#11845), <b>oxc-project/oxc</b> (#28109, #28110),
+<b>pmd/pmd</b> (#7225 approved), <b>msgspec</b> (#1302), and <b>SQLAlchemy</b> (#13710). 1,100+ contributions in the last year.
 </p>
 
 <h2>git + agents</h2>
 <p>
 Parallel agent runs on real worktrees, branches and rebases are my daily shape of work.
 I benchmark the agents (agent-trials), audit their config files (ruleherd), meter their
-context cost (ctxvitals) and lint their output (slopsieve). Making a codebase agent-ready
+context cost (ctxvitals), gate their MCP tools (mcp-bouncer, canimcp) and lint their output (slopsieve). Making a codebase agent-ready
 is most of what I already do.
 </p>
 
